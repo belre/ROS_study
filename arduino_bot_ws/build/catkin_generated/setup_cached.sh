@@ -11,5 +11,6 @@ export CMAKE_PREFIX_PATH="/home/okui/ros_course/arduino_bot_ws/devel:$CMAKE_PREF
 export LD_LIBRARY_PATH="/home/okui/ros_course/arduino_bot_ws/devel/lib:$LD_LIBRARY_PATH"
 export PATH='/opt/ros/noetic/bin:/home/okui/.pyenv/versions/3.9.14/bin:/home/okui/.pyenv/libexec:/home/okui/.pyenv/plugins/python-build/bin:/home/okui/.pyenv/versions/3.9.14/bin:/home/okui/.pyenv/libexec:/home/okui/.pyenv/plugins/python-build/bin:/home/okui/.pyenv/shims:/home/okui/.pyenv/bin:/home/okui/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
 export PKG_CONFIG_PATH="/home/okui/ros_course/arduino_bot_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PYTHONPATH="/home/okui/ros_course/arduino_bot_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/okui/ros_course/arduino_bot_ws/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/okui/ros_course/arduino_bot_ws/src:$ROS_PACKAGE_PATH"

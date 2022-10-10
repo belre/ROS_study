@@ -1,2 +1,2 @@
-arduino_bot_description:arduino_bot_test
+arduino_bot_controller:arduino_bot_description:arduino_bot_test
 -DCATKIN_DEVEL_PREFIX=/home/okui/ros_course/arduino_bot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/okui/ros_course/arduino_bot_ws/install -G Unix Makefiles

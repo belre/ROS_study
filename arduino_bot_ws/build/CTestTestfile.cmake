@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("arduino_bot_description")
+subdirs("arduino_bot_controller")
 subdirs("arduino_bot_test")
