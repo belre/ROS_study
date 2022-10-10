@@ -3,6 +3,6 @@ prefix=/home/okui/ros_course/arduino_bot_ws/devel
 Name: arduino_bot_test
 Description: Description of arduino_bot_test
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/okui/ros_course/arduino_bot_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 
