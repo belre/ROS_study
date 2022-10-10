@@ -1,8 +1,0 @@
-prefix=/home/okui/ros_course/arduino_bot_ws/install
-
-Name: arduino_bot_controller
-Description: Description of arduino_bot_controller
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 
