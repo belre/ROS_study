@@ -40,6 +40,10 @@ catkin_install_python(
     ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
+add_executable(angles_converter_cpp src/angles_cpp_converter.cpp)
+add_dependencies(angles_converter_cpp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(angles_converter_cpp ${catkin_LIBRARIES})
+
 add_executable(arduino_bot_interface_node src/arduino_bot_interface.cpp)
 add_dependencies(arduino_bot_interface_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(arduino_bot_interface_node ${catkin_LIBRARIES})
