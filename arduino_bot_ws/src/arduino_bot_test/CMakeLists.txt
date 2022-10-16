@@ -46,3 +46,11 @@ target_link_libraries(simple_cpp_subscriber ${catkin_LIBRARIES})
 add_executable(simple_cpp_timer src/simple_timer.cpp)
 target_link_libraries(simple_cpp_timer ${catkin_LIBRARIES})
 
+add_executable(simple_cpp_service src/simple_service.cpp)
+add_dependencies(simple_cpp_service ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_cpp_service ${catkin_LIBRARIES})
+
+
+add_executable(simple_cpp_client src/simple_service_client.cpp)
+add_dependencies(simple_cpp_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_cpp_client ${catkin_LIBRARIES})
