@@ -28,7 +28,7 @@ catkin_package(
     hardware_interface
 )
 
-include_directories(
+include_directories(simple_cpp_service
   include
   ${catkin_INCLUDE_DIRS}
 )

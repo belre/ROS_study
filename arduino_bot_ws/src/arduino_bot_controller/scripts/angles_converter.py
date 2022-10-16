@@ -26,8 +26,3 @@ if __name__ == "__main__":
     degrees_to_radians = rospy.Service('degrees_to_radians', AnglesConverter, convert_degrees_to_radians)
     rospy.spin()    
 
-
-
-
-
-

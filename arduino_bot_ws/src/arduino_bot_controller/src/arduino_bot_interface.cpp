@@ -13,7 +13,7 @@ ArduinoBotInterface::ArduinoBotInterface(ros::NodeHandle& nh) : _nh(nh),
                                                             _names{"joint_1", "joint2", "joint_3", "joint_4"}
 {
     _hardware_pub = _pnh.advertise<std_msgs::UInt16MultiArray>("/arduino/arm_actuate", 1000);
-    _hardware_srv = _pnh.serviceClient<arduino_bot_controller::AnglesConverter>("./radians_to_degrees");
+    _hardware_srv = _pnh.serviceClient<arduino_bot_controller::AnglesConverter>("/radians_to_degrees");
     
     hardware_interface::JointStateHandle state_handle1(_names.at(0), &_position.at(0), &_velocity.at(0), &_effort.at(0));
     _joint_state_interface.registerHandle(state_handle1);
