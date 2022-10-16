@@ -1,0 +1,20 @@
+<launch>
+    <arg name="is_sim" default="false" />
+    <rosparam file="$(find arduino_bot_controller)/config/trajectory_controllers.yaml" command="load" />.
+    <rosparam file="$(find arduino_bot_controller)/config/joint_state_controller.yaml" command="load" />
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find arduino_bot_description)/urdf/arduinobot.urdf.xacro"/>
+
+    <group unless="$(arg is_sim)">
+        <node pkg="arduino_bot_controller" type="angles_converter_cpp" name="angles_converter" respawn="true" output="screen" />
+        <node pkg="arduino_bot_controller" type="arduino_bot_interface_node" name="arduino_bot_interface_node" respawn="true" output="screen" ns="arduino_bot" />
+    </group>
+
+    <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false" output="screen" ns="arduino_bot"
+          args="arm_controller gripper_controller joint_state_controller" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen">
+        <remap from="/joint_states" to="/arduino_bot/joint_states" />
+    </node>
+
+</launch>
