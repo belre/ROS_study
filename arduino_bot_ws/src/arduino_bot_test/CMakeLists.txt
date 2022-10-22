@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  actionlib
 )
 
 add_service_files(
@@ -14,9 +15,15 @@ add_service_files(
   AddTwoInts.srv
 )
 
+add_action_files(
+  FILES
+  Fibonacci.action
+)
+
 generate_messages(
   DEPENDENCIES
   std_msgs
+  actionlib
 )
 
 catkin_package(
@@ -34,6 +41,8 @@ catkin_install_python(
   scripts/simple_timer.py
   scripts/simple_service.py
   scripts/simple_service_client.py
+  scripts/simple_action_server.py
+  scripts/simple_action_client.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
