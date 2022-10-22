@@ -3,6 +3,8 @@
 devel/*
 devel/*/
 build/*
+build
+devel
 *.pyc
 *.cmake
 *.make
