@@ -23,7 +23,7 @@ add_action_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
-  actionlib
+  actionlib_msgs
 )
 
 catkin_package(
@@ -59,7 +59,19 @@ add_executable(simple_cpp_service src/simple_service.cpp)
 add_dependencies(simple_cpp_service ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(simple_cpp_service ${catkin_LIBRARIES})
 
-
 add_executable(simple_cpp_client src/simple_service_client.cpp)
 add_dependencies(simple_cpp_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(simple_cpp_client ${catkin_LIBRARIES})
+
+
+add_executable(simple_cpp_action_server src/simple_action_server.cpp)
+add_dependencies(simple_cpp_action_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_cpp_action_server ${catkin_LIBRARIES})
+
+add_executable(simple_cpp_action_client src/simple_action_client.cpp)
+add_dependencies(simple_cpp_action_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_cpp_action_client ${catkin_LIBRARIES})
+
+
+
+
